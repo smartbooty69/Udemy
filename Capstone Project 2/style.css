@@ -1,0 +1,18 @@
+body{
+    margin: o;
+    text-align: center;
+    font-family: merriweathe;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: #66bfbf;
+    margin: 20px;
+    height 100vh
+}
+
+.heading1{
+    
+}
