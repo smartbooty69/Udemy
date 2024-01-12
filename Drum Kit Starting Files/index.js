@@ -1,10 +1,18 @@
-var numberOfDrumButtons = document.querySelectorAll(".drum").length
+ var numberOfDrumButtons = document.querySelectorAll(".drum").length
 
 for(var i=0;i<numberOfDrumButtons;i++){
 document.querySelectorAll(".drum")[i].addEventListener("click", function(){
     var buttonInnerHTML = this.innerHTML;
+    makeSound(buttonInnerHTML);
+    });
+}
 
-    switch (buttonInnerHTML) {
+document.addEventListener("keydown",function(event){
+    makeSound(event.key)
+});
+
+function makeSound(key){
+    switch (key) {
         case "w":
             var kick = new Audio("sounds/kick-bass.mp3");
             kick.play();
@@ -37,10 +45,7 @@ document.querySelectorAll(".drum")[i].addEventListener("click", function(){
             console.log();
             break;
     }
-});
-
 }
-
 
 
 
